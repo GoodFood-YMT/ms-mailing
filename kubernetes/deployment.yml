@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-mailing
+  labels:
+    app: ms-mailing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms-mailing
+  template:
+    metadata:
+      labels:
+        app: ms-mailing
+    spec:
+      containers:
+        - envFrom:
+            - configMapRef:
+                name: ms-mailing-config
+            - secretRef:
+                name: ms-mailing-secret
+          image: rabbitmq:3.8.25-management-alpine
+          name: ms-mailing
+          ports:
+            - containerPort: 3333
+          resources: {}
+      restartPolicy: Always

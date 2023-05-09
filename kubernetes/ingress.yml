@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ms-mailing
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: ms-mailing.localdev.me
+      http:
+        paths:
+          - pathType: Prefix
+            backend:
+              service:
+                name: ms-mailing
+                port:
+                  number: 3333
+            path: /
