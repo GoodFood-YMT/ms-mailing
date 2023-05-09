@@ -20,7 +20,7 @@ spec:
                 name: ms-mailing-config
             - secretRef:
                 name: ms-mailing-secret
-          image: rabbitmq:3.8.25-management-alpine
+          image: yasinkara/ms-mailing:latest
           name: ms-mailing
           ports:
             - containerPort: 3333
