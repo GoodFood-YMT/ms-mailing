@@ -21,6 +21,7 @@ spec:
             - secretRef:
                 name: ms-mailing-secret
           image: yasinkara/ms-mailing:latest
+          imagePullPolicy: Always
           name: ms-mailing
           ports:
             - containerPort: 3333
