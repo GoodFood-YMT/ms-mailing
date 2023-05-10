@@ -17,10 +17,3 @@
 | import './routes/customer'
 |
 */
-
-import Route from '@ioc:Adonis/Core/Route'
-
-Route.get('/mailing', async ({ request }) => {
-  console.log(request.headers())
-  return { hello: 'world', headers: request.headers() }
-})
