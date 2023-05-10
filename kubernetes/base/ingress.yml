@@ -5,13 +5,13 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: ms-mailing.localdev.me
+    - host: goodfood.localdev.me
       http:
         paths:
           - pathType: Prefix
+            path: /mailing
             backend:
               service:
                 name: ms-mailing
                 port:
                   number: 3333
-            path: /
