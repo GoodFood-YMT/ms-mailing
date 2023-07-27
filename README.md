@@ -1,12 +1,9 @@
-# MS-MAILING
+# Mailing Microservice
 
-## Prerequisite
-
-- Docker (or Docker Desktop)
-- Kubernetes
+[Global Documentation](https://doc-goodfood-ymt.notion.site/API-Documentation-79d18341ef67437cb9c5c7c71af84658?pvs=4)
 
 ## Setup
 
 - Create `kubernetes/overlays/dev/secret.yml` file
 - Fill the created file with base
-- Execute `kubectl apply -k ./kubernetes/overlays/dev`
+- Execute on the root directory `kubectl apply -k ./kubernetes/overlays/dev`
